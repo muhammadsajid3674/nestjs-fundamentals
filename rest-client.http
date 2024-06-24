@@ -9,7 +9,7 @@ Content-Type: application/json
 
 {
     "title": "Lasting Lover",
-    "artists": ["sigla"],
+    "artists": ["sigla", "martin", "john"],
     "releasedDate":"2022-09-23",
     "duration": "02:34"
 }
