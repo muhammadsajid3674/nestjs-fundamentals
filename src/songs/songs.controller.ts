@@ -13,7 +13,7 @@ import {
 } from '@nestjs/common';
 import { SongsService } from './songs.service';
 import { CreateSongDto } from './dto/create-song-dto';
-import { Connection } from 'src/common/contants/connection';
+import { Connection } from 'src/common/constants/connection';
 
 @Controller('songs')
 export class SongsController {
@@ -21,7 +21,9 @@ export class SongsController {
     private songService: SongsService,
     @Inject('CONNECTION')
     private connection: Connection,
-  ) {}
+  ) {
+    console.log('connection', this.connection.CONNECTION_STRING);
+  }
   @Post()
   create(@Body() createSongDto: CreateSongDto) {
     return this.songService.create(createSongDto);

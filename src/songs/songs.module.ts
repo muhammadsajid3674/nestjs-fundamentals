@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { SongsController } from './songs.controller';
 import { SongsService } from './songs.service';
-import { connection } from 'src/common/contants/connection';
+import { connection } from 'src/common/constants/connection';
 
 const mockSongsService = {
   findAll() {
