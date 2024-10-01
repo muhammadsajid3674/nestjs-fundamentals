@@ -4,7 +4,7 @@ GET http://localhost:3000/
 GET http://localhost:3000/songs
 
 ###
-GET http://localhost:3000/songs/1
+GET http://localhost:3000/songs/4
 
 ###
 POST http://localhost:3000/songs
@@ -12,13 +12,23 @@ Content-Type: application/json
 
 {
     "title": "Lasting Lover",
-    "artists": ["sigla", "martin", "john"],
+    "artists": ["Sigla", "Martin", "John"],
     "releasedDate":"2022-09-23",
-    "duration": "02:34"
+    "duration": "02:34",
+    "lyrics": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
 }
 
 ###
 PUT http://localhost:3000/songs/1
+Content-Type: application/json
+
+{
+    "title": "Lasting Lover Updated",
+    "releasedDate":"2022-09-23",
+    "duration": "02:34",
+    "lyrics": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+
+}
 
 ###
-DELETE http://localhost:3000/songs/1
+DELETE http://localhost:3000/songs/2

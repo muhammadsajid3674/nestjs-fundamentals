@@ -4,8 +4,8 @@ import {
   Column,
   Entity,
   JoinTable,
+  ManyToMany,
   ManyToOne,
-  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 @Entity('songs')
@@ -14,14 +14,17 @@ export class Song {
   id: number;
   @Column()
   title: string;
-  @Column()
-  date: Date;
+  @Column('date')
+  releasedDate: Date;
+
+  @Column('time')
+  duration: Date;
   @Column()
   lyrics: string;
-
-  @OneToMany(() => Artist, (artist) => artist.songs, { cascade: true })
+  
+  @ManyToMany(() => Artist, (artist) => artist.songs, { cascade: true })
   @JoinTable({ name: 'songs_artists' })
-  artists: Artist;
+  artists: string[];
 
   @ManyToOne(() => Playlist, (playlist) => playlist.songs)
   playList: Playlist;
