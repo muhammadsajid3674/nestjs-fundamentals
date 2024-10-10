@@ -24,7 +24,7 @@ export class Song {
   
   @ManyToMany(() => Artist, (artist) => artist.songs, { cascade: true })
   @JoinTable({ name: 'songs_artists' })
-  artists: string[];
+  artists: Artist[];
 
   @ManyToOne(() => Playlist, (playlist) => playlist.songs)
   playList: Playlist;

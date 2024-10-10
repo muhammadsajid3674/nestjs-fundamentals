@@ -12,7 +12,7 @@ Content-Type: application/json
 
 {
     "title": "Lasting Lover",
-    "artists": ["Sigla", "Martin", "John"],
+    "artists": [1, 2],
     "releasedDate":"2022-09-23",
     "duration": "02:34",
     "lyrics": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
